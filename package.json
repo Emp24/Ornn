@@ -1,0 +1,16 @@
+{
+  "name": "Ornn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kayn": "^0.10.2",
+    "leaguejs": "^2.1.3"
+  }
+}
