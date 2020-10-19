@@ -61,3 +61,30 @@ async function playground() {
   console.log(list_of_participants);
 }
 playground();
+
+async function get_match_state(participants, summoner_name) {
+  for (let i = 0; i < 10; i++) {
+    if (participants[i].summoner_name === summoner_name) {
+      return participants.stats.win;
+    }
+  }
+}
+
+async function create_match(participants) {
+  match = {
+    state: get_match_state(participants),
+    participants: participants,
+  };
+
+  return match;
+}
+//Creating match object
+list_of_matches = match_objects;
+match = {
+  state: boolean,
+  participants: list_of_participants,
+};
+
+//Get the state of the match from the participants object or list of participants
+
+IDS.participantID;

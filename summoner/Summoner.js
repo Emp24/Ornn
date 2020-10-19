@@ -1,4 +1,5 @@
-const { summoner_info, get_match_history } = require("./api");
+const Riot_Api = require("./api");
+const api = new Riot_Api();
 class Summoner {
   constructor() {
     this.summonerInfo;
@@ -6,8 +7,9 @@ class Summoner {
   }
 
   async init(SummonerName) {
-    this.summonerInfo = await summoner_info(SummonerName);
-    this.matchHistory = await get_match_history(this.summonerInfo.accountId);
+    await api.init(SummonerName);
+    this.summonerInfo = await api.summoner_info();
+    this.matchHistory = await api.create_match_history();
   }
 }
 
